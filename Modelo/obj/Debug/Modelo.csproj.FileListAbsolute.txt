@@ -1,0 +1,17 @@
+C:\Users\sebie\OneDrive - frt.utn.edu.ar\AA - FACULTAD\1AA - 4to año\Programacion de Aplicaciones Distribuidas\GestorInventarioBackend\Modelo\bin\Debug\Modelo.dll
+C:\Users\sebie\OneDrive - frt.utn.edu.ar\AA - FACULTAD\1AA - 4to año\Programacion de Aplicaciones Distribuidas\GestorInventarioBackend\Modelo\bin\Debug\Modelo.pdb
+C:\Users\sebie\OneDrive - frt.utn.edu.ar\AA - FACULTAD\1AA - 4to año\Programacion de Aplicaciones Distribuidas\GestorInventarioBackend\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
+C:\Users\sebie\OneDrive - frt.utn.edu.ar\AA - FACULTAD\1AA - 4to año\Programacion de Aplicaciones Distribuidas\GestorInventarioBackend\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\sebie\OneDrive - frt.utn.edu.ar\AA - FACULTAD\1AA - 4to año\Programacion de Aplicaciones Distribuidas\GestorInventarioBackend\Modelo\obj\Debug\Modelo.dll
+C:\Users\sebie\OneDrive - frt.utn.edu.ar\AA - FACULTAD\1AA - 4to año\Programacion de Aplicaciones Distribuidas\GestorInventarioBackend\Modelo\obj\Debug\Modelo.pdb
+C:\FAC C#\GestorInventarioBackend\Modelo\bin\Debug\Modelo.dll
+C:\FAC C#\GestorInventarioBackend\Modelo\bin\Debug\Modelo.pdb
+C:\FAC C#\GestorInventarioBackend\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\FAC C#\GestorInventarioBackend\Modelo\obj\Debug\Modelo.dll
+C:\FAC C#\GestorInventarioBackend\Modelo\obj\Debug\Modelo.pdb
+C:\Users\Admin\Escritorio\GestorInventarioBackend\Modelo\bin\Debug\Modelo.dll
+C:\Users\Admin\Escritorio\GestorInventarioBackend\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Admin\Escritorio\GestorInventarioBackend\Modelo\obj\Debug\Modelo.csproj.AssemblyReference.cache
+C:\Users\Admin\Escritorio\GestorInventarioBackend\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Escritorio\GestorInventarioBackend\Modelo\obj\Debug\Modelo.dll
+C:\Users\Admin\Escritorio\GestorInventarioBackend\Modelo\obj\Debug\Modelo.pdb

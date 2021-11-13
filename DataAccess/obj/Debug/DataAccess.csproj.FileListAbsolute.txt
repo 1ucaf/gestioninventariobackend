@@ -1,0 +1,38 @@
+C:\Users\sebie\OneDrive - frt.utn.edu.ar\AA - FACULTAD\1AA - 4to año\Programacion de Aplicaciones Distribuidas\GestorInventarioBackend\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\sebie\OneDrive - frt.utn.edu.ar\AA - FACULTAD\1AA - 4to año\Programacion de Aplicaciones Distribuidas\GestorInventarioBackend\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\sebie\OneDrive - frt.utn.edu.ar\AA - FACULTAD\1AA - 4to año\Programacion de Aplicaciones Distribuidas\GestorInventarioBackend\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+C:\Users\sebie\OneDrive - frt.utn.edu.ar\AA - FACULTAD\1AA - 4to año\Programacion de Aplicaciones Distribuidas\GestorInventarioBackend\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\sebie\OneDrive - frt.utn.edu.ar\AA - FACULTAD\1AA - 4to año\Programacion de Aplicaciones Distribuidas\GestorInventarioBackend\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\sebie\OneDrive - frt.utn.edu.ar\AA - FACULTAD\1AA - 4to año\Programacion de Aplicaciones Distribuidas\GestorInventarioBackend\DataAccess\obj\Debug\DataAccess.pdb
+C:\FAC C#\GestorInventarioBackend\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+C:\FAC C#\GestorInventarioBackend\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+C:\FAC C#\GestorInventarioBackend\DataAccess\obj\Debug\DataAccess.dll
+C:\FAC C#\GestorInventarioBackend\DataAccess\obj\Debug\DataAccess.pdb
+C:\FAC C#\GestorInventarioBackend\DataAccess\bin\Debug\DataAccess.dll.config
+C:\FAC C#\GestorInventarioBackend\DataAccess\bin\Debug\DataAccess.dll
+C:\FAC C#\GestorInventarioBackend\DataAccess\bin\Debug\DataAccess.pdb
+C:\FAC C#\GestorInventarioBackend\DataAccess\bin\Debug\EntityFramework.dll
+C:\FAC C#\GestorInventarioBackend\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\FAC C#\GestorInventarioBackend\DataAccess\bin\Debug\Modelo.dll
+C:\FAC C#\GestorInventarioBackend\DataAccess\bin\Debug\Modelo.pdb
+C:\FAC C#\GestorInventarioBackend\DataAccess\bin\Debug\EntityFramework.xml
+C:\FAC C#\GestorInventarioBackend\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\FAC C#\GestorInventarioBackend\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+C:\FAC C#\GestorInventarioBackend\DataAccess\obj\Debug\DataAccess.Migrations.InitialMigration.resources
+C:\FAC C#\GestorInventarioBackend\DataAccess\obj\Debug\DataAccess.csproj.GenerateResource.cache
+C:\Users\Admin\Escritorio\GestorInventarioBackend\DataAccess\bin\Debug\DataAccess.dll.config
+C:\Users\Admin\Escritorio\GestorInventarioBackend\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\Admin\Escritorio\GestorInventarioBackend\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\Admin\Escritorio\GestorInventarioBackend\DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Escritorio\GestorInventarioBackend\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\Escritorio\GestorInventarioBackend\DataAccess\bin\Debug\Modelo.dll
+C:\Users\Admin\Escritorio\GestorInventarioBackend\DataAccess\bin\Debug\Modelo.pdb
+C:\Users\Admin\Escritorio\GestorInventarioBackend\DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Escritorio\GestorInventarioBackend\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\Escritorio\GestorInventarioBackend\DataAccess\obj\Debug\DataAccess.csproj.AssemblyReference.cache
+C:\Users\Admin\Escritorio\GestorInventarioBackend\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Escritorio\GestorInventarioBackend\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+C:\Users\Admin\Escritorio\GestorInventarioBackend\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\Admin\Escritorio\GestorInventarioBackend\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\Admin\Escritorio\GestorInventarioBackend\DataAccess\obj\Debug\DataAccess.Migrations.IniitialMigration.resources
+C:\Users\Admin\Escritorio\GestorInventarioBackend\DataAccess\obj\Debug\DataAccess.csproj.GenerateResource.cache
