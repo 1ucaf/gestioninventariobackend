@@ -18,9 +18,15 @@ namespace GestorInventarioBackend.Controllers
         private RegistroContext db = new RegistroContext();
 
         // GET: api/Proveedors
-        public IQueryable<Proveedor> GetProveedores()
+        public IQueryable<object> GetProveedores()
         {
-            return db.Proveedores;
+            return db.Proveedores.Select( proveedor => new
+                {
+                    ProveedorId = proveedor.ProveedorId,
+                    CUIT = proveedor.CUIT,
+                    RazonSocial = proveedor.RazonSocial
+                }
+            );
         }
 
         // GET: api/Proveedors/5

@@ -18,9 +18,14 @@ namespace GestorInventarioBackend.Controllers
         private RegistroContext db = new RegistroContext();
 
         // GET: api/Oficinas
-        public IQueryable<Oficina> GetOficinas()
+        public IQueryable<object> GetOficinas()
         {
-            return db.Oficinas;
+            return db.Oficinas.Select(oficina =>
+                new
+                {
+                    OficinaId = oficina.OficinaId,
+                    Nombre = oficina.Nombre
+                });
         }
 
         // GET: api/Oficinas/5
@@ -33,7 +38,13 @@ namespace GestorInventarioBackend.Controllers
                 return NotFound();
             }
 
-            return Ok(oficina);
+            return Ok(
+                new
+                {
+                    OficinaId = oficina.OficinaId,
+                    Nombre = oficina.Nombre
+                }
+            );
         }
 
         // PUT: api/Oficinas/5

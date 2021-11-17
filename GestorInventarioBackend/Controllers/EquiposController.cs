@@ -18,7 +18,7 @@ namespace GestorInventarioBackend.Controllers
         private RegistroContext db = new RegistroContext();
 
         // GET: Equipos
-        public IQueryable<Equipo> GetEquipos()
+        public IQueryable<object> GetEquipos()
         {
             return db.Equipos;
         }

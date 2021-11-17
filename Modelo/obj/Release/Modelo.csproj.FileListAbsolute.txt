@@ -1,0 +1,6 @@
+C:\Users\Admin\Escritorio\GestorInventarioBackend\Modelo\bin\Release\Modelo.dll
+C:\Users\Admin\Escritorio\GestorInventarioBackend\Modelo\bin\Release\Modelo.pdb
+C:\Users\Admin\Escritorio\GestorInventarioBackend\Modelo\obj\Release\Modelo.csproj.AssemblyReference.cache
+C:\Users\Admin\Escritorio\GestorInventarioBackend\Modelo\obj\Release\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Escritorio\GestorInventarioBackend\Modelo\obj\Release\Modelo.dll
+C:\Users\Admin\Escritorio\GestorInventarioBackend\Modelo\obj\Release\Modelo.pdb

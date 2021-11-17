@@ -18,9 +18,14 @@ namespace GestorInventarioBackend.Controllers
         private RegistroContext db = new RegistroContext();
 
         // GET: api/Perifericoes
-        public IQueryable<Periferico> GetPerifericos()
+        public IQueryable<object> GetPerifericos()
         {
-            return db.Perifericos;
+            return db.Perifericos.Select( p => new
+                    {
+                        p.PerifericoId,
+                        p.Descripcion
+                    }
+            );
         }
 
         // GET: api/Perifericoes/5
