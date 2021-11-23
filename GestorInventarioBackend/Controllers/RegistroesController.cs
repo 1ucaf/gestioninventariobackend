@@ -18,13 +18,19 @@ namespace GestorInventarioBackend.Controllers
         private RegistroContext db = new RegistroContext();
 
         // GET: api/Registroes
-        public IQueryable<Registro> GetRegistros()
+        public IQueryable<object> GetRegistros()
         {
-            return db.Registros;
+            return db.Registros.Select(registro => new
+            {
+                RegistroId = registro.RegistroId,
+                Descripcion = registro.Descripcion,
+                Fecha = registro.Fecha,
+                EquipoId = registro.EquipoId,
+            });
         }
 
         // GET: api/Registroes/5
-        [ResponseType(typeof(Registro))]
+        [ResponseType(typeof(object))]
         public IHttpActionResult GetRegistro(int id)
         {
             Registro registro = db.Registros.Find(id);
@@ -33,7 +39,13 @@ namespace GestorInventarioBackend.Controllers
                 return NotFound();
             }
 
-            return Ok(registro);
+            return Ok(new
+            {
+                RegistroId = registro.RegistroId,
+                Descripcion = registro.Descripcion,
+                Fecha = registro.Fecha,
+                EquipoId = registro.EquipoId,
+            });
         }
 
         // PUT: api/Registroes/5

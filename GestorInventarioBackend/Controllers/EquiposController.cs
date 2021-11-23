@@ -8,23 +8,25 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
+using System.Web.Http.Cors;
 using DataAccess;
 using Modelo;
 
 namespace GestorInventarioBackend.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class EquiposController : ApiController
     {
         private RegistroContext db = new RegistroContext();
 
         // GET: Equipos
-        public IQueryable<object> GetEquipos()
+        public IQueryable<Equipo> GetEquipos()
         {
             return db.Equipos;
         }
 
         // GET: Equipos/5
-        [ResponseType(typeof(Equipo))]
+        [ResponseType(typeof(object))]
         public IHttpActionResult GetEquipo(int id)
         {
             Equipo equipo = db.Equipos.Find(id);
@@ -33,7 +35,23 @@ namespace GestorInventarioBackend.Controllers
                 return NotFound();
             }
 
-            return Ok(equipo);
+            var proveedor   = db.Proveedores.Where(p => p.ProveedorId == equipo.ProveedorId).First();
+            var oficina     = db.Oficinas.Where(o => o.OficinaId == equipo.OficinaId).First();
+
+            var equipoADevolver = new
+            {
+                EquipoId = equipo.EquipoId,
+                Descripcion = equipo.Descripcion,
+                Adquisicion = equipo.Adquisicion,
+                VencimientoGarantia = equipo.VencimientoGarantia,
+                ProveedorId = equipo.ProveedorId,
+                OficinaId = equipo.OficinaId,
+
+                ProveedorRazonSocial = proveedor.RazonSocial,
+                OficinaNombre = oficina.Nombre
+            };
+
+            return Ok(equipoADevolver);
         }
 
         // PUT: Equipos/5

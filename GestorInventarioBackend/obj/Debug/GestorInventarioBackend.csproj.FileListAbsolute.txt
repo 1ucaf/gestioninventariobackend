@@ -156,3 +156,14 @@ C:\Users\Admin\Escritorio\GestorInventarioBackend\GestorInventarioBackend\obj\De
 C:\Users\Admin\Escritorio\GestorInventarioBackend\GestorInventarioBackend\obj\Debug\GestorInventarioBackend.csproj.CopyComplete
 C:\Users\Admin\Escritorio\GestorInventarioBackend\GestorInventarioBackend\obj\Debug\GestorInventarioBackend.dll
 C:\Users\Admin\Escritorio\GestorInventarioBackend\GestorInventarioBackend\obj\Debug\GestorInventarioBackend.pdb
+C:\Users\Admin\Escritorio\GestorInventarioBackend\GestorInventarioBackend\bin\System.Web.Cors.dll
+C:\Users\Admin\Escritorio\GestorInventarioBackend\GestorInventarioBackend\bin\System.Web.Http.Cors.dll
+C:\Users\Admin\Escritorio\GestorInventarioBackend\GestorInventarioBackend\bin\System.Web.Http.Cors.xml
+C:\Users\Admin\Escritorio\GestorInventarioBackend\GestorInventarioBackend\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Admin\Escritorio\GestorInventarioBackend\GestorInventarioBackend\bin\Microsoft.IdentityModel.Logging.dll
+C:\Users\Admin\Escritorio\GestorInventarioBackend\GestorInventarioBackend\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Admin\Escritorio\GestorInventarioBackend\GestorInventarioBackend\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Admin\Escritorio\GestorInventarioBackend\GestorInventarioBackend\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\Admin\Escritorio\GestorInventarioBackend\GestorInventarioBackend\bin\Microsoft.IdentityModel.Logging.xml
+C:\Users\Admin\Escritorio\GestorInventarioBackend\GestorInventarioBackend\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Users\Admin\Escritorio\GestorInventarioBackend\GestorInventarioBackend\bin\System.IdentityModel.Tokens.Jwt.xml

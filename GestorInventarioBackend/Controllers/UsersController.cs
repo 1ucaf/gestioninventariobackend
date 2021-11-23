@@ -17,10 +17,18 @@ namespace GestorInventarioBackend.Controllers
     {
         private RegistroContext db = new RegistroContext();
 
+        //[Authorize]
         // GET: api/Users
-        public IQueryable<User> GetUsers()
+        public IQueryable<object> GetUsers()
         {
-            return db.Users;
+            return db.Users.Select(user => new
+            {
+                UserName = user.UserName,
+                Email = user.Email,
+                Nombre = user.Nombre,
+                Apellido = user.Apellido,
+                Equipo = user.EquipoAsignado.Descripcion
+            });
         }
 
         // GET: api/Users/5
@@ -33,7 +41,14 @@ namespace GestorInventarioBackend.Controllers
                 return NotFound();
             }
 
-            return Ok(user);
+            return Ok(new
+            {
+                UserName = user.UserName,
+                Email = user.Email,
+                Nombre = user.Nombre,
+                Apellido = user.Apellido,
+                EquipoId = user.EquipoAsignado != null ? user.EquipoAsignado.EquipoId : null
+            });
         }
 
         // PUT: api/Users/5

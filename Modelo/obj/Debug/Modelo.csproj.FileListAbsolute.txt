@@ -14,3 +14,4 @@ C:\Users\Admin\Escritorio\GestorInventarioBackend\Modelo\bin\Debug\Modelo.pdb
 C:\Users\Admin\Escritorio\GestorInventarioBackend\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Escritorio\GestorInventarioBackend\Modelo\obj\Debug\Modelo.dll
 C:\Users\Admin\Escritorio\GestorInventarioBackend\Modelo\obj\Debug\Modelo.pdb
+C:\Users\Admin\Escritorio\GestorInventarioBackend\Modelo\obj\Debug\Modelo.csproj.AssemblyReference.cache

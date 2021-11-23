@@ -8,7 +8,7 @@ namespace Modelo
 {
     public class Equipo
     {
-        public int EquipoId { get; set; }
+        public int? EquipoId { get; set; }
         public string Descripcion { get; set; }
         public DateTime Adquisicion { get; set; }
         public DateTime VencimientoGarantia { get; set; }
