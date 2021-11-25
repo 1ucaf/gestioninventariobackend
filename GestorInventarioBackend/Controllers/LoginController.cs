@@ -9,6 +9,7 @@ using System.Net;
 using System.Net.Http;
 using System.Security.Claims;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.Description;
 using DataAccess;
 using GestorInventarioBackend.Models;
@@ -17,13 +18,14 @@ using Modelo;
 
 namespace GestorInventarioBackend.Controllers
 {
-    [AllowAnonymous]
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     [RoutePrefix("")]
     public class LoginController : ApiController
     {
         private RegistroContext db = new RegistroContext();
 
         // POST: api/Login
+        [AllowAnonymous]
         [ResponseType(typeof(User))]
         [Route("login")]
         public IHttpActionResult Authenticate(LoginRequest login)

@@ -7,17 +7,20 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.Description;
 using DataAccess;
 using Modelo;
 
 namespace GestorInventarioBackend.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class RegistroesController : ApiController
     {
         private RegistroContext db = new RegistroContext();
 
         // GET: api/Registroes
+        [Authorize]
         public IQueryable<object> GetRegistros()
         {
             return db.Registros.Select(registro => new
@@ -30,6 +33,7 @@ namespace GestorInventarioBackend.Controllers
         }
 
         // GET: api/Registroes/5
+        [Authorize]
         [ResponseType(typeof(object))]
         public IHttpActionResult GetRegistro(int id)
         {
@@ -49,6 +53,7 @@ namespace GestorInventarioBackend.Controllers
         }
 
         // PUT: api/Registroes/5
+        [Authorize]
         [ResponseType(typeof(void))]
         public IHttpActionResult PutRegistro(int id, Registro registro)
         {
@@ -84,6 +89,7 @@ namespace GestorInventarioBackend.Controllers
         }
 
         // POST: api/Registroes
+        [Authorize]
         [ResponseType(typeof(Registro))]
         public IHttpActionResult PostRegistro(Registro registro)
         {
@@ -99,6 +105,7 @@ namespace GestorInventarioBackend.Controllers
         }
 
         // DELETE: api/Registroes/5
+        [Authorize]
         [ResponseType(typeof(Registro))]
         public IHttpActionResult DeleteRegistro(int id)
         {

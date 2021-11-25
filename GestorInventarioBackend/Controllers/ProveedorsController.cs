@@ -7,17 +7,20 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.Description;
 using DataAccess;
 using Modelo;
 
 namespace GestorInventarioBackend.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class ProveedorsController : ApiController
     {
         private RegistroContext db = new RegistroContext();
 
         // GET: api/Proveedors
+        [Authorize]
         public IQueryable<object> GetProveedores()
         {
             return db.Proveedores.Select( proveedor => new
@@ -30,6 +33,7 @@ namespace GestorInventarioBackend.Controllers
         }
 
         // GET: api/Proveedors/5
+        [Authorize]
         [ResponseType(typeof(Proveedor))]
         public IHttpActionResult GetProveedor(int id)
         {
@@ -43,6 +47,7 @@ namespace GestorInventarioBackend.Controllers
         }
 
         // PUT: api/Proveedors/5
+        [Authorize]
         [ResponseType(typeof(void))]
         public IHttpActionResult PutProveedor(int id, Proveedor proveedor)
         {
@@ -78,6 +83,7 @@ namespace GestorInventarioBackend.Controllers
         }
 
         // POST: api/Proveedors
+        [Authorize]
         [ResponseType(typeof(Proveedor))]
         public IHttpActionResult PostProveedor(Proveedor proveedor)
         {
@@ -93,6 +99,7 @@ namespace GestorInventarioBackend.Controllers
         }
 
         // DELETE: api/Proveedors/5
+        [Authorize]
         [ResponseType(typeof(Proveedor))]
         public IHttpActionResult DeleteProveedor(int id)
         {

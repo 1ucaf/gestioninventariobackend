@@ -7,17 +7,20 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.Description;
 using DataAccess;
 using Modelo;
 
 namespace GestorInventarioBackend.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class PerifericoesController : ApiController
     {
         private RegistroContext db = new RegistroContext();
 
         // GET: api/Perifericoes
+        [Authorize]
         public IQueryable<object> GetPerifericos()
         {
             return db.Perifericos.Select( p => new
@@ -29,6 +32,7 @@ namespace GestorInventarioBackend.Controllers
         }
 
         // GET: api/Perifericoes/5
+        [Authorize]
         [ResponseType(typeof(Periferico))]
         public IHttpActionResult GetPeriferico(int id)
         {
@@ -42,6 +46,7 @@ namespace GestorInventarioBackend.Controllers
         }
 
         // PUT: api/Perifericoes/5
+        [Authorize]
         [ResponseType(typeof(void))]
         public IHttpActionResult PutPeriferico(int id, Periferico periferico)
         {
@@ -77,6 +82,7 @@ namespace GestorInventarioBackend.Controllers
         }
 
         // POST: api/Perifericoes
+        [Authorize]
         [ResponseType(typeof(Periferico))]
         public IHttpActionResult PostPeriferico(Periferico periferico)
         {
@@ -92,6 +98,7 @@ namespace GestorInventarioBackend.Controllers
         }
 
         // DELETE: api/Perifericoes/5
+        [Authorize]
         [ResponseType(typeof(Periferico))]
         public IHttpActionResult DeletePeriferico(int id)
         {

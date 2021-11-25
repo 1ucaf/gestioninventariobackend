@@ -20,12 +20,14 @@ namespace GestorInventarioBackend.Controllers
         private RegistroContext db = new RegistroContext();
 
         // GET: Equipos
+        [Authorize]
         public IQueryable<Equipo> GetEquipos()
         {
             return db.Equipos;
         }
 
         // GET: Equipos/5
+        [Authorize]
         [ResponseType(typeof(object))]
         public IHttpActionResult GetEquipo(int id)
         {
@@ -55,6 +57,7 @@ namespace GestorInventarioBackend.Controllers
         }
 
         // PUT: Equipos/5
+        [Authorize]
         [ResponseType(typeof(void))]
         public IHttpActionResult PutEquipo(int id, Equipo equipo)
         {
@@ -90,6 +93,7 @@ namespace GestorInventarioBackend.Controllers
         }
 
         // POST: Equipos
+        [Authorize]
         [ResponseType(typeof(Equipo))]
         public IHttpActionResult PostEquipo(Equipo equipo)
         {
@@ -105,6 +109,7 @@ namespace GestorInventarioBackend.Controllers
         }
 
         // DELETE: Equipos/5
+        [Authorize]
         [ResponseType(typeof(Equipo))]
         public IHttpActionResult DeleteEquipo(int id)
         {

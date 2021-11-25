@@ -7,17 +7,20 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.Description;
 using DataAccess;
 using Modelo;
 
 namespace GestorInventarioBackend.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class OficinasController : ApiController
     {
         private RegistroContext db = new RegistroContext();
 
         // GET: api/Oficinas
+        [Authorize]
         public IQueryable<object> GetOficinas()
         {
             return db.Oficinas.Select(oficina =>
@@ -29,6 +32,7 @@ namespace GestorInventarioBackend.Controllers
         }
 
         // GET: api/Oficinas/5
+        [Authorize]
         [ResponseType(typeof(Oficina))]
         public IHttpActionResult GetOficina(int id)
         {
@@ -48,6 +52,7 @@ namespace GestorInventarioBackend.Controllers
         }
 
         // PUT: api/Oficinas/5
+        [Authorize]
         [ResponseType(typeof(void))]
         public IHttpActionResult PutOficina(int id, Oficina oficina)
         {
@@ -83,6 +88,7 @@ namespace GestorInventarioBackend.Controllers
         }
 
         // POST: api/Oficinas
+        [Authorize]
         [ResponseType(typeof(Oficina))]
         public IHttpActionResult PostOficina(Oficina oficina)
         {
@@ -98,6 +104,7 @@ namespace GestorInventarioBackend.Controllers
         }
 
         // DELETE: api/Oficinas/5
+        [Authorize]
         [ResponseType(typeof(Oficina))]
         public IHttpActionResult DeleteOficina(int id)
         {
