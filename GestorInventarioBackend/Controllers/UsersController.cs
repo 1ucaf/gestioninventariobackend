@@ -71,15 +71,14 @@ namespace GestorInventarioBackend.Controllers
 
             Equipo equipo = db.Equipos.Where(equipo1 => equipo1.EquipoId == user.EquipoId).FirstOrDefault();
 
-            User user1 = new User()
-            {
-                UserName = user.UserName,
-                Email = user.Email,
-                Password = user.Password,
-                Nombre = user.Nombre,
-                Apellido = user.Apellido,
-                EquipoAsignado = equipo,
-            };
+            User user1 = db.Users.Find(user.UserName);
+
+            user1.UserName = user.UserName;
+            user1.Email = user.Email;
+            user1.Password = user.Password;
+            user1.Nombre = user.Nombre;
+            user1.Apellido = user.Apellido;
+            user1.EquipoAsignado = equipo;
 
             db.Entry(user1).State = EntityState.Modified;
 
