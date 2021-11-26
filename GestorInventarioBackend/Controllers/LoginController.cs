@@ -92,6 +92,46 @@ namespace GestorInventarioBackend.Controllers
             return Request.CreateResponse(statusCode, newToken);
         }
 
+        [ResponseType(typeof(User))]
+        [Route("GetUser")]
+        public HttpResponseMessage GetUser(string token)
+        {
+            HttpStatusCode statusCode = HttpStatusCode.OK;
+            string userName = null;
+            try
+            {
+                var secretKey = ConfigurationManager.AppSettings["JWT_SECRET_KEY"];
+                var audienceToken = ConfigurationManager.AppSettings["JWT_AUDIENCE_TOKEN"];
+                var issuerToken = ConfigurationManager.AppSettings["JWT_ISSUER_TOKEN"];
+                var securityKey = new SymmetricSecurityKey(System.Text.Encoding.Default.GetBytes(secretKey));
+
+                SecurityToken securityToken;
+                var tokenHandler = new System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler();
+                TokenValidationParameters validationParameters = new TokenValidationParameters()
+                {
+                    ValidAudience = audienceToken,
+                    ValidIssuer = issuerToken,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    LifetimeValidator = this.LifetimeValidator,
+                    IssuerSigningKey = securityKey
+                };
+
+                // Extract and assign Current Principal and user
+                ClaimsPrincipal CurrentPrincipal = tokenHandler.ValidateToken(token, validationParameters, out securityToken);
+                userName = CurrentPrincipal.Claims.Where(c => c.Type == ClaimTypes.Name).FirstOrDefault().Value;
+            }
+            catch (SecurityTokenValidationException)
+            {
+                statusCode = HttpStatusCode.Unauthorized;
+            }
+            catch (Exception)
+            {
+                statusCode = HttpStatusCode.InternalServerError;
+            }
+            return Request.CreateResponse(statusCode, userName);
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)

@@ -10,6 +10,7 @@ using System.Web.Http;
 using System.Web.Http.Cors;
 using System.Web.Http.Description;
 using DataAccess;
+using GestorInventarioBackend.Utilities;
 using Modelo;
 
 namespace GestorInventarioBackend.Controllers
@@ -21,14 +22,31 @@ namespace GestorInventarioBackend.Controllers
 
         // GET: api/Oficinas
         [Authorize]
-        public IQueryable<object> GetOficinas()
+        public List<object> GetOficinas()
         {
-            return db.Oficinas.Select(oficina =>
-                new
+            try
+            {
+                List<object> oficinas = new List<object>();
+                foreach(var oficina in db.Oficinas)
                 {
-                    OficinaId = oficina.OficinaId,
-                    Nombre = oficina.Nombre
-                });
+                    var Fechas = new List<DateTime>();
+                    foreach(var equipo in oficina.Equipos)
+                    {
+                        Fechas.Add(new DateTime(equipo.Adquisicion.Ticks));
+                    }
+                    var prom = Utils.GetPromedioDeAntiguedadPorOficina(Fechas);
+                    oficinas.Add(new
+                    {
+                        OficinaId = oficina.OficinaId,
+                        Nombre = oficina.Nombre,
+                        PromAntEquipos = prom
+                    });
+                }
+                return oficinas;
+            } catch(Exception e)
+            {
+                return new List<object> { e };
+            }
         }
 
         // GET: api/Oficinas/5
@@ -133,5 +151,6 @@ namespace GestorInventarioBackend.Controllers
         {
             return db.Oficinas.Count(e => e.OficinaId == id) > 0;
         }
+
     }
 }
