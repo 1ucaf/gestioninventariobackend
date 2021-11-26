@@ -25,7 +25,7 @@ namespace GestorInventarioBackend.Controllers
         {
             return db.Registros.Select(registro => new
             {
-                RegistroId = registro.RegistroId,
+                RegistroId = registro.RegistroId,   
                 Descripcion = registro.Descripcion,
                 Fecha = registro.Fecha,
                 EquipoId = registro.EquipoId,

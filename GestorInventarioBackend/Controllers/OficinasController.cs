@@ -60,11 +60,19 @@ namespace GestorInventarioBackend.Controllers
                 return NotFound();
             }
 
+            var Fechas = new List<DateTime>();
+            foreach (var equipo in oficina.Equipos)
+            {
+                Fechas.Add(new DateTime(equipo.Adquisicion.Ticks));
+            }
+            var prom = Utils.GetPromedioDeAntiguedadPorOficina(Fechas);
+
             return Ok(
                 new
                 {
                     OficinaId = oficina.OficinaId,
-                    Nombre = oficina.Nombre
+                    Nombre = oficina.Nombre,
+                    PromAntEquipos = prom
                 }
             );
         }

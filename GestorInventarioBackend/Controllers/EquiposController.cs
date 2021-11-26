@@ -37,8 +37,8 @@ namespace GestorInventarioBackend.Controllers
                 return NotFound();
             }
 
-            var proveedor   = db.Proveedores.Where(p => p.ProveedorId == equipo.ProveedorId).First();
-            var oficina     = db.Oficinas.Where(o => o.OficinaId == equipo.OficinaId).First();
+            var proveedor = db.Proveedores.Where(p => p.ProveedorId == equipo.ProveedorId).First();
+            var oficina = db.Oficinas.Where(o => o.OficinaId == equipo.OficinaId).First();
 
             var equipoADevolver = new
             {
@@ -54,6 +54,31 @@ namespace GestorInventarioBackend.Controllers
             };
 
             return Ok(equipoADevolver);
+        }
+
+
+        // GET: Equipos/5
+        [Route("equipos/Perifericos")]
+        [Authorize]
+        [ResponseType(typeof(object))]
+        public IHttpActionResult GetPerifericos(int id)
+        {
+            Equipo equipo = db.Equipos.Find(id);
+            if (equipo == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(db.Perifericos
+                .Where(p => p.EquipoId == equipo.EquipoId)
+                .Select(p =>
+                    new
+                    {
+                        p.PerifericoId,
+                        p.Descripcion
+                    })
+                );
+
         }
 
         // PUT: Equipos/5
